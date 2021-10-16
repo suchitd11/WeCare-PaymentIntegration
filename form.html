@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1341082258073596"
+    crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quicksand:wght@600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome CSS -->
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous" />
+
+  <!-- Custom CSS -->
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Bootstrap CSS  -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <title>WeCare | Help a Little, Impact will be Big!</title>
+
+</head>
+
+<body>
+  <section class="s1">
+    <div class="top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="#s1">WeCare<span><strong>.</strong></span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#title">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Activities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#details">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <form name="myform" class="container" id="form" method="POST" onsubmit="return validateForm()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Name</label>
+        <input type="email" class="form-control" id="inputEmail4" name="name" />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCity">Email</label>
+        <input type="text" class="form-control" id="inputCity" name="email" />
+      </div>
+    </div>
+    <!-- <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div> -->
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Appointment Date</label>
+        <input type="date" class="form-control" id="inputPassword4" name="date" />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Appointment time</label>
+        <input type="time" class="form-control" id="inputPassword4" name="time" />
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="inputState">Donation Type</label>
+        <select id="inputState" class="form-control">
+          <option selected>Select</option>
+          <option>Goods to use</option>
+          <option>Cash</option>
+        </select>
+      </div>
+      <!-- <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div> -->
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck" />
+        <label class="form-check-label" for="gridCheck">
+          Terms and Conditions Apply
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Book</button>
+  </form>
+</body>
+<script>
+  function validateForm() {
+    console.log("hello")
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+      alert("Email must be filled out");
+      return false;
+    }
+    x = document.forms["myForm"]["date"].value;
+    if (x == "") {
+      alert("Date Must be selected");
+      return false;
+    }
+    if (x == "12-11-2021") {
+      alert("All Slots for the day are booked");
+      return false;
+    }
+    x = document.forms["myForm"]["time"].value;
+    if (x == "") {
+      alert("Time Must be selected");
+      return false;
+    }
+    if (x == "12:30") {
+      alert("Slot for 12:30 is booked");
+      return false;
+    }
+  }
+</script>
+
+</html>
