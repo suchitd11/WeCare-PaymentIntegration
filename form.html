@@ -69,11 +69,11 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Name</label>
-        <input type="email" class="form-control" id="inputEmail4" name="name" />
+        <input type="text" class="form-control" id="inputEmail4" name="name" />
       </div>
       <div class="form-group col-md-6">
         <label for="inputCity">Email</label>
-        <input type="text" class="form-control" id="inputCity" name="email" />
+        <input type="email" class="form-control" id="inputCity" name="email" />
       </div>
     </div>
     <!-- <div class="form-group">
@@ -115,40 +115,42 @@
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Book</button>
+    <button type="button" class="btn btn-primary" onclick="return validateForm()">Book</button>
   </form>
 </body>
 <script>
   function validateForm() {
-    console.log("hello")
-    let x = document.forms["myForm"]["name"].value;
+    const ele = document.forms.myform.elements;
+    let x = ele.name.value
     if (x == "") {
       alert("Name must be filled out");
       return false;
     }
-    x = document.forms["myForm"]["email"].value;
+    x = ele.email.value;
     if (x == "") {
       alert("Email must be filled out");
       return false;
     }
-    x = document.forms["myForm"]["date"].value;
+    x = ele.date.value;
     if (x == "") {
       alert("Date Must be selected");
       return false;
     }
-    if (x == "12-11-2021") {
+    if (x == "2021-11-12") {
       alert("All Slots for the day are booked");
       return false;
     }
-    x = document.forms["myForm"]["time"].value;
+    x = ele.time.value;
     if (x == "") {
       alert("Time Must be selected");
       return false;
     }
-    if (x == "12:30") {
+    if (x == "12:00") {
       alert("Slot for 12:30 is booked");
       return false;
     }
+    alert("Thank you for booking with us");
+    return true;
   }
 </script>
 
