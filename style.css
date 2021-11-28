@@ -10,6 +10,8 @@ body{
 
 /* Navbar styles */
 
+/* Media Queries for responsiveness */
+
 .navbar{
     height: 6rem;
 }
@@ -23,6 +25,7 @@ body{
 .container-fluid{
     font-family: 'Quicksand', sans-serif;
     font-size: 1.2rem;
+    height:120px;
 }
 
 .container-fluid span{
@@ -131,7 +134,16 @@ body{
 }
 
 /* Section 4 - Details */
-
+#details input{
+    height: 3rem;
+    padding: 10px 20px;
+    border: 1px solid #002d5b;
+    border-radius: 5px;
+    width: 360px;
+    position: relative;
+    z-index: 5;
+    margin-left: 2.2rem;
+}
 #details{
     padding: 7rem;
     text-align: center;
@@ -153,16 +165,6 @@ body{
     margin-bottom: 0.25rem;
 }
 
-#details input{
-    height: 3rem;
-    padding: 10px 20px;
-    border: 1px solid #002d5b;
-    border-radius: 5px;
-    width: 360px;
-    position: relative;
-    z-index: 5;
-    margin-left: 2.2rem;
-}
 
 #details .socials{
     margin-top: 0.2rem;
@@ -185,17 +187,22 @@ body{
     margin: 50px;
 }
 
-/* Media Queries for responsiveness */
 
 @media only screen and (max-width:992px){
-    
+    .navbar{
+        width: 134%;
+    }
+    #title h1{
+        margin-top: 5rem;
+        font-size: 50px;
+        width: 100%;
+        margin-left: 4.5rem;
+    }
+
     .container-fluid .logo{
         margin-left: 2.5rem;
     }
 
-    .navbar{
-        width: 134%;
-    }
 
     .top button{
         margin-right: 1rem;
@@ -214,12 +221,6 @@ body{
         display: none;
     }
 
-    #title h1{
-        margin-top: 5rem;
-        font-size: 50px;
-        width: 100%;
-        margin-left: 4.5rem;
-    }
 
     #title p{
         width: 100%;
